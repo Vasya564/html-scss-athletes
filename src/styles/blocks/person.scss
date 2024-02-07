@@ -1,0 +1,73 @@
+.person {
+  box-sizing: border-box;
+  width: $card-width;
+  padding: 10px;
+
+  transition: transform $transition-duration;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: #EEEEEE;
+
+    transform: scale(1.2);
+    z-index: 1;
+  }
+
+  &__photo {
+    position: relative;
+    display: flex;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 50%;
+    
+    transition: border-radius $transition-duration;
+  }
+
+  &:hover &__image {
+    border-radius: 60px;
+  }
+
+  &__rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    align-self: center;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+
+    color: #8B0000;
+    background-color: white;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 23px;
+    color: #2F4F4F;
+    font-weight: bold;
+  }
+
+  &__extra {
+    visibility: hidden;
+    margin-top: 9px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &:hover &__extra {
+    visibility: visible;
+  }
+}

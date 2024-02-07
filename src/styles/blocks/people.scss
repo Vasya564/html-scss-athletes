@@ -1,0 +1,17 @@
+.people {
+  --columns: 2;
+  
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: $column-gap;
+
+  width: calc((var(--columns) - 1) * #{$column-gap} + var(--columns) * #{$card-width});
+  margin: 0 auto;
+  padding: 30px 15px;
+
+  @media (min-width: 1000px) {
+    --columns: 4;
+    padding-inline: 35px;
+  }
+}
